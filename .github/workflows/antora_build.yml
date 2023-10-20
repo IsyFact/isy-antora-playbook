@@ -70,16 +70,21 @@ jobs:
     steps:
       - name: Checkout isyfact.github.io
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.ANTORA_TOKEN }}
+          repository: IsyFact/isyfact.github.io
+          ref: gh-pages
       - name: Download documentation
         uses: actions/download-artifact@v3
         with:
           name: Documentation
           path: docs
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           branch: gh-pages
           folder: docs
-          token: ${{ secrets.ANTORA_TOKEN  }}
+          force: false
+          token: ${{ secrets.ANTORA_TOKEN }}
           repository-name: IsyFact/isyfact.github.io
 
