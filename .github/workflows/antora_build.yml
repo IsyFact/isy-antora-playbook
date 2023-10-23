@@ -69,12 +69,8 @@ jobs:
     # run one job instance at a time to prevent conflicts while pushing build result
     concurrency: ci-pages-update
     steps:
-      - name: Checkout isyfact.github.io
+      - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.ANTORA_TOKEN }}
-          repository: IsyFact/isyfact.github.io
-          ref: gh-pages
       - name: Download documentation
         if: false
         uses: actions/download-artifact@v3
@@ -93,5 +89,4 @@ jobs:
           force: false
           token: ${{ secrets.ANTORA_TOKEN }}
           repository-name: IsyFact/isyfact.github.io
-          debug: true
 
