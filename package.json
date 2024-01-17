@@ -1,6 +1,6 @@
 {
-  "name": "isyfact-standards-documentation",
-  "version": "3.0.0",
+  "name": "isyfact-online-documentation",
+  "version": "4.0.0",
 
   "scripts": {
     "build": "antora antora-playbook.yml"
