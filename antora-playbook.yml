@@ -3,7 +3,7 @@ site:
   url: https://isyfact.github.io/
   start_page: isyfact-standards-doku:einstieg:einstieg.adoc
 urls:
-  latest_version_segment: latest
+  latest_version_segment: current
   latest_prerelease_version_segment: dev
 content:
   # Comment: Ideal configuration when Antora supports Git LFS (see README for details)
@@ -12,7 +12,7 @@ content:
     #  branches: HEAD
     #  start_path: src/docs/antora
     #- url: https://github.com/IsyFact/isyfact-standards.git
-    #  branches: HEAD
+    #  branches: [release/3.x,master]
     #  start_path: isyfact-standards-doc/src/docs/antora
     #- url: https://github.com/IsyFact/isy-web.git
     #  branches: HEAD
@@ -26,6 +26,9 @@ content:
     - url: ./isyfact-standards
       branches: HEAD
       start_path: isyfact-standards-doc/src/docs/antora
+    - url: ./isyfact-standards-3.x
+      branches: HEAD
+      start_path: isyfact-standards-doc/src/docs/antora
     - url: ./isy-web
       branches: HEAD
       start_path: isy-web-doc/src/docs/antora
@@ -37,7 +40,7 @@ content:
   #    branches: HEAD
   #    start_path: src/docs/antora
   #  - url: ../isyfact-standards
-  #    branches: HEAD
+  #    branches: [release/3.x,master]
   #    start_path: isyfact-standards-doc/src/docs/antora
   #  - url: ../isy-web
   #    branches: HEAD
@@ -55,7 +58,7 @@ asciidoc:
     caution-caption: Achtung
     important-caption: Wichtig
     note-caption: Hinweis
-    tip-caption: Tip
+    tip-caption: Tipp
     warning-caption: Warnung
     appendix-caption: Anhang
     example-caption: Beispiel
